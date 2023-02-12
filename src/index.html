@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Home</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    </style>
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <div class="background">
+      <iframe
+        class="ytplayer"
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/-HxJYZI9AMk?controls=0&autoplay=1&mute=1"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+    <header>
+      <div>
+        <h1 id="hour"><span id="seconds"></span></h1>
+        <p class="divider">|</p>
+        <h3 id="date"></h3>
+      </div>
+    </header>
+    <main>
+      <div>
+        <div class="weather">
+          <script>
+            (function (d, s, id) {
+              if (d.getElementById(id)) {
+                if (window.__TOMORROW__) {
+                  window.__TOMORROW__.renderWidget();
+                }
+                return;
+              }
+              const fjs = d.getElementsByTagName(s)[0];
+              const js = d.createElement(s);
+              js.id = id;
+              js.src =
+                "https://www.tomorrow.io/v1/widget/sdk/sdk.bundle.min.js";
+
+              fjs.parentNode.insertBefore(js, fjs);
+            })(document, "script", "tomorrow-sdk");
+          </script>
+
+          <div
+            class="tomorrow"
+            data-location-id="085958"
+            data-language="EN"
+            data-unit-system="METRIC"
+            data-skin="light"
+            data-widget-type="aqiPollen"
+            style="padding-bottom: 22px; position: relative"
+          >
+            <a
+              href="https://www.tomorrow.io/weather-api/"
+              rel="nofollow noopener noreferrer"
+              target="_blank"
+              style="
+                position: absolute;
+                bottom: 0;
+                transform: translateX(-50%);
+                left: 50%;
+              "
+            >
+              <img
+                alt="Powered by the Tomorrow.io Weather API"
+                src="https://weather-website-client.tomorrow.io/img/powered-by.svg"
+                width="250"
+                height="18"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="widgets">
+          <div class="column" id="daily">
+            <div class="container">
+              <h5>Random fact</h5>
+              <div class="text-area" id="random-fact">
+                <li>
+                  gfyeskfygufkse gfseygufyksgy gu gefkugyu kgyu kfeag geasmfg
+                  eas gykeagfk agyk eaugf ukaegu keauyageufy ga yukeaguyj
+                </li>
+                <li>
+                  gfyeskfygufkse gfseygufyksgy gu gefkugyu kgyu kfeag geasmfg
+                  eas gykeagfk agyk eaugf ukaegu keauyageufy ga yukeaguyj
+                </li>
+                <li>
+                  gfyeskfygufkse gfseygufyksgy gu gefkugyu kgyu kfeag geasmfg
+                  eas gykeagfk agyk eaugf ukaegu keauyageufy ga yukeaguyj
+                </li>
+                <li>
+                  gfyeskfygufkse gfseygufyksgy gu gefkugyu kgyu kfeag geasmfg
+                  eas gykeagfk agyk eaugf ukaegu keauyageufy ga yukeaguyj
+                </li>
+              </div>
+            </div>
+            <div class="container">
+              <h5>Quote of the day</h5>
+              <div class="text-area" id="quote-of-the-day"></div>
+            </div>
+            <div class="container">
+              <h5>On this day in...</h5>
+              <div class="text-area" id="on-this-day-in"></div>
+            </div>
+          </div>
+          <div class="column" id="blogs">
+            <div class="container blog">
+              <div class="blog-area">
+                <div class="post">
+                  <img class="post-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1107px-How_to_use_icon.svg.png" alt="">
+                  <div class="post-text-container">
+                    <p class = "post-title">How To Help The Victims Of The Earthquake In Turkey: What You Can Do Now</p>
+                    <p class = "post-website">medium.com</p>
+                  </div>
+                </div>
+                <div class="post">
+                  <img class="post-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1107px-How_to_use_icon.svg.png" alt="">
+                  <div class="post-text-container">
+                    <p class = "post-title">How To Help The Victims Of The Earthquake In Turkey: What You Can Do Now</p>
+                    <p class = "post-website">medium.com</p>
+                  </div>
+                </div>
+                <div class="post">
+                  <img class="post-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1107px-How_to_use_icon.svg.png" alt="">
+                  <div class="post-text-container">
+                    <p class = "post-title">How To Help The Victims Of The Earthquake In Turkey: What You Can Do Now</p>
+                    <p class = "post-website">medium.com</p>
+                  </div>
+                </div>
+                <div class="post">
+                  <img class="post-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1107px-How_to_use_icon.svg.png" alt="">
+                  <div class="post-text-container">
+                    <p class = "post-title">How To Help The Victims Of The Earthquake In Turkey: What You Can Do Now</p>
+                    <p class = "post-website">medium.com</p>
+                  </div>
+                </div>
+                <div class="post">
+                  <img class="post-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1107px-How_to_use_icon.svg.png" alt="">
+                  <div class="post-text-container">
+                    <p class = "post-title">How To Help The Victims Of The Earthquake In Turkey: What You Can Do Now</p>
+                    <p class = "post-website">medium.com</p>
+                  </div>
+                </div>
+                <div class="post">
+                  <img class="post-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1107px-How_to_use_icon.svg.png" alt="">
+                  <div class="post-text-container">
+                    <p class = "post-title">How To Help The Victims Of The Earthquake In Turkey: What You Can Do Now</p>
+                    <p class = "post-website">medium.com</p>
+                  </div>
+                </div>
+                <div class="post">
+                  <img class="post-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1107px-How_to_use_icon.svg.png" alt="">
+                  <div class="post-text-container">
+                    <p class = "post-title">How To Help The Victims Of The Earthquake In Turkey: What You Can Do Now</p>
+                    <p class = "post-website">medium.com</p>
+                  </div>
+                </div>
+                <div class="post">
+                  <img class="post-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1107px-How_to_use_icon.svg.png" alt="">
+                  <div class="post-text-container">
+                    <p class = "post-title">How To Help The Victims Of The Earthquake In Turkey: What You Can Do Now</p>
+                    <p class = "post-website">medium.com</p>
+                  </div>
+                </div>
+                <div class="post">
+                  <img class="post-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1107px-How_to_use_icon.svg.png" alt="">
+                  <div class="post-text-container">
+                    <p class = "post-title">How To Help The Victims Of The Earthquake In Turkey: What You Can Do Now</p>
+                    <p class = "post-website">medium.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <aside>
+      <a id="gear">
+        <span class="material-symbols-outlined"> settings </span>
+      </a>
+      <div class="container hidden" id="settings">
+        <div id="settings-brightness">
+          <p class="selected">Bright</p>
+          <p>Dark</p>
+        </div>
+        <li class="selected" id="old-donyo">ol Donyo Lodge Wildlife Live Stream</li>
+        <li id="old-donyo">Tokyo</li>
+      </div>
+    </aside>
+    <footer>
+      <p class="copyright">
+        Patryk Kielian © <span id="copyright-year">2023 </span> wszelkie prawa
+        zastrzeżone
+      </p>
+    </footer>
+    <script src="index.js" async defer></script>
+  </body>
+</html>

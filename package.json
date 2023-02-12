@@ -1,0 +1,13 @@
+{
+  "name": "browser-homepage",
+  "version": "1.0.0",
+  "description": "Personal webpage to use as homepage in an internet browser",
+  "scripts": {
+    "start": "parcel src/index.html"
+  },
+  "author": "Patryk Kielian",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}
