@@ -11,6 +11,7 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="index.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -30,9 +31,9 @@
     <div class="background">
       <iframe
         class="ytplayer"
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/-HxJYZI9AMk?controls=0&autoplay=1&mute=1"
+        width="960"
+        height="540"
+        src="http://www.youtube.com/embed/-HxJYZI9AMk?controls=0&autoplay=1&mute=1"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -99,38 +100,29 @@
         <div class="widgets">
           <div class="column" id="daily">
             <div class="container">
-              <h5>Random fact</h5>
-              <div class="text-area" id="random-fact">
-                <li>
-                  gfyeskfygufkse gfseygufyksgy gu gefkugyu kgyu kfeag geasmfg
-                  eas gykeagfk agyk eaugf ukaegu keauyageufy ga yukeaguyj
-                </li>
-                <li>
-                  gfyeskfygufkse gfseygufyksgy gu gefkugyu kgyu kfeag geasmfg
-                  eas gykeagfk agyk eaugf ukaegu keauyageufy ga yukeaguyj
-                </li>
-                <li>
-                  gfyeskfygufkse gfseygufyksgy gu gefkugyu kgyu kfeag geasmfg
-                  eas gykeagfk agyk eaugf ukaegu keauyageufy ga yukeaguyj
-                </li>
-                <li>
-                  gfyeskfygufkse gfseygufyksgy gu gefkugyu kgyu kfeag geasmfg
-                  eas gykeagfk agyk eaugf ukaegu keauyageufy ga yukeaguyj
-                </li>
+              <div class="scrollable">
+                <h5>Random fact</h5>
+                <div class="text-area" id="random-fact">
+                  
+                </div>
               </div>
             </div>
             <div class="container">
-              <h5>Quote of the day</h5>
-              <div class="text-area" id="quote-of-the-day"></div>
+              <div class="scrollable">
+                <h5>Quote of the day</h5>
+                <div class="text-area" id="quote-of-the-day"></div>
+              </div>
             </div>
             <div class="container">
-              <h5>On this day in...</h5>
-              <div class="text-area" id="on-this-day-in"></div>
+              <div class="scrollable">
+                <h5>On this day in...</h5>
+                <div class="text-area" id="on-this-day-in"></div>
+              </div>
             </div>
           </div>
           <div class="column" id="blogs">
             <div class="container blog">
-              <div class="blog-area">
+              <div class="blog-area scrollable">
                 <div class="post">
                   <img class="post-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1107px-How_to_use_icon.svg.png" alt="">
                   <div class="post-text-container">
@@ -206,19 +198,18 @@
       </a>
       <div class="container hidden" id="settings">
         <div id="settings-brightness">
-          <p class="selected">Bright</p>
-          <p>Dark</p>
+          <p>Toggle bright/dark</p>
         </div>
-        <li class="selected" id="old-donyo">ol Donyo Lodge Wildlife Live Stream</li>
-        <li id="old-donyo">Tokyo</li>
+        <div id="settings-backgrounds">
+          <input type="radio" id="bg-0" name="setting" value="0" checked>
+          <label for="bg-0">ol Donyo Lodge Wildlife Live Stream</label><br>
+        </div>
       </div>
     </aside>
     <footer>
       <p class="copyright">
-        Patryk Kielian © <span id="copyright-year">2023 </span> wszelkie prawa
-        zastrzeżone
+        Patryk Kielian © <span id="copyright-year">2023 </span> all rights reserved
       </p>
     </footer>
-    <script src="index.js" async defer></script>
   </body>
 </html>
