@@ -18,8 +18,10 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -102,9 +104,7 @@
             <div class="container">
               <div class="scrollable">
                 <h5>Random fact</h5>
-                <div class="text-area" id="random-fact">
-                  
-                </div>
+                <div class="text-area" id="random-fact"></div>
               </div>
             </div>
             <div class="container">
@@ -116,77 +116,20 @@
             <div class="container">
               <div class="scrollable">
                 <h5>On this day in...</h5>
-                <div class="text-area" id="on-this-day-in"></div>
+                <div class="text-area" id="on-this-day-in">
+                  <p>
+                    Historical event data provided by
+                    <a href="https://today.zenquotes.io/" target="_blank"
+                      >ZenQuotes.io</a
+                    >
+                  </p>
+                </div>
               </div>
             </div>
           </div>
           <div class="column" id="blogs">
             <div class="container blog">
-              <div class="blog-area scrollable">
-                <div class="post">
-                  <img class="post-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1107px-How_to_use_icon.svg.png" alt="">
-                  <div class="post-text-container">
-                    <p class = "post-title">How To Help The Victims Of The Earthquake In Turkey: What You Can Do Now</p>
-                    <p class = "post-website">medium.com</p>
-                  </div>
-                </div>
-                <div class="post">
-                  <img class="post-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1107px-How_to_use_icon.svg.png" alt="">
-                  <div class="post-text-container">
-                    <p class = "post-title">How To Help The Victims Of The Earthquake In Turkey: What You Can Do Now</p>
-                    <p class = "post-website">medium.com</p>
-                  </div>
-                </div>
-                <div class="post">
-                  <img class="post-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1107px-How_to_use_icon.svg.png" alt="">
-                  <div class="post-text-container">
-                    <p class = "post-title">How To Help The Victims Of The Earthquake In Turkey: What You Can Do Now</p>
-                    <p class = "post-website">medium.com</p>
-                  </div>
-                </div>
-                <div class="post">
-                  <img class="post-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1107px-How_to_use_icon.svg.png" alt="">
-                  <div class="post-text-container">
-                    <p class = "post-title">How To Help The Victims Of The Earthquake In Turkey: What You Can Do Now</p>
-                    <p class = "post-website">medium.com</p>
-                  </div>
-                </div>
-                <div class="post">
-                  <img class="post-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1107px-How_to_use_icon.svg.png" alt="">
-                  <div class="post-text-container">
-                    <p class = "post-title">How To Help The Victims Of The Earthquake In Turkey: What You Can Do Now</p>
-                    <p class = "post-website">medium.com</p>
-                  </div>
-                </div>
-                <div class="post">
-                  <img class="post-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1107px-How_to_use_icon.svg.png" alt="">
-                  <div class="post-text-container">
-                    <p class = "post-title">How To Help The Victims Of The Earthquake In Turkey: What You Can Do Now</p>
-                    <p class = "post-website">medium.com</p>
-                  </div>
-                </div>
-                <div class="post">
-                  <img class="post-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1107px-How_to_use_icon.svg.png" alt="">
-                  <div class="post-text-container">
-                    <p class = "post-title">How To Help The Victims Of The Earthquake In Turkey: What You Can Do Now</p>
-                    <p class = "post-website">medium.com</p>
-                  </div>
-                </div>
-                <div class="post">
-                  <img class="post-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1107px-How_to_use_icon.svg.png" alt="">
-                  <div class="post-text-container">
-                    <p class = "post-title">How To Help The Victims Of The Earthquake In Turkey: What You Can Do Now</p>
-                    <p class = "post-website">medium.com</p>
-                  </div>
-                </div>
-                <div class="post">
-                  <img class="post-img"src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/How_to_use_icon.svg/1107px-How_to_use_icon.svg.png" alt="">
-                  <div class="post-text-container">
-                    <p class = "post-title">How To Help The Victims Of The Earthquake In Turkey: What You Can Do Now</p>
-                    <p class = "post-website">medium.com</p>
-                  </div>
-                </div>
-              </div>
+              <div class="blog-area scrollable"></div>
             </div>
           </div>
         </div>
@@ -200,15 +143,19 @@
         <div id="settings-brightness">
           <p>Toggle bright/dark</p>
         </div>
-        <div id="settings-backgrounds">
-          <input type="radio" id="bg-0" name="setting" value="0" checked>
-          <label for="bg-0">ol Donyo Lodge Wildlife Live Stream</label><br>
+        <div class="scrollable">
+          <div id="settings-backgrounds">
+            <h3>Select background source:</h3>
+            <input type="radio" id="bg-0" name="setting" value="0" checked />
+            <label for="bg-0">ol Donyo Lodge Wildlife Live Stream</label><br />
+          </div>
         </div>
       </div>
     </aside>
     <footer>
       <p class="copyright">
-        Patryk Kielian © <span id="copyright-year">2023 </span> all rights reserved
+        Patryk Kielian © <span id="copyright-year">2023 </span> all rights
+        reserved
       </p>
     </footer>
   </body>

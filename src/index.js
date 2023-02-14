@@ -1,6 +1,6 @@
 "use strict";
 
-import { API_NINJAS } from "./config";
+import { API_NINJAS, API_NEWS } from "./config";
 
 document.querySelector("#copyright-year").innerText = new Date().getFullYear();
 
@@ -12,6 +12,8 @@ const allScrollables = document.querySelectorAll(".scrollable");
 
 const textAreaFacts = document.querySelector("#random-fact");
 const textAreaQuotes = document.querySelector("#quote-of-the-day");
+const textAreaOnThisDay = document.querySelector("#on-this-day-in");
+const blogArea = document.querySelector(".blog-area");
 
 const gearIcon = document.querySelector("#gear span");
 const settingsContainer = document.querySelector("#settings");
@@ -99,6 +101,13 @@ gearIcon.addEventListener("click", () => {
   gearIcon.classList.toggle("dark");
 });
 
+document.addEventListener("click", (event) => {
+  if (!settingsContainer.contains(event.target) && event.target !== gearIcon) {
+    settingsContainer.classList.add("hidden");
+    gearIcon.classList.remove("dark");
+  }
+});
+
 for (let i = 0; i < backgrounds.length; i++) {
   if (i > 0) {
     settingsBackgrounds.insertAdjacentHTML(
@@ -156,7 +165,6 @@ async function getFacts() {
       }
     );
     const data = await response.json();
-    console.log(data);
     for (let i = 0; i < limit; i++) {
       textAreaFacts.insertAdjacentHTML("beforeend", `<li>${data[i].fact}</li>`);
     }
@@ -189,3 +197,87 @@ async function getQuotes() {
   }
 }
 getQuotes();
+
+// on this day API
+
+async function getOnThisDay() {
+  try {
+    const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+    const targetUrl = `https://today.zenquotes.io/api`;
+
+    const response = await fetch(proxyUrl + targetUrl);
+    const data = await response.json();
+
+    console.log(data);
+
+    const eventIndices = new Set();
+    while (eventIndices.size < 10) {
+      eventIndices.add(Math.floor(Math.random() * data.data.Events.length));
+    }
+
+    console.log([eventIndices]);
+
+    eventIndices.forEach((index) =>
+      textAreaOnThisDay.insertAdjacentHTML(
+        "afterbegin",
+        `<li>${data.data.Events[index].text}</li>`
+      )
+    );
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+getOnThisDay();
+
+// news API
+
+async function getNews(
+  method,
+  count,
+  paramCountry = "",
+  paramCategory = "",
+  paramSources = "",
+  paramDomains = ""
+) {
+  try {
+    const response = await fetch(
+      `https://newsapi.org/v2/${method}?` +
+        new URLSearchParams({
+          apiKey: API_NEWS,
+          country: paramCountry,
+          category: paramCategory,
+          sources: paramSources,
+          domains: paramDomains,
+        })
+    );
+    const data = await response.json();
+    console.log(data);
+    articles = data.articles;
+    for (let i = 0; i < count; i++) {
+      blogArea.insertAdjacentHTML(
+        "beforeend",
+        `<a class="post" href="${articles[i].url}">
+          <img
+            class="post-img"
+            src="${articles[i].urlToImage}"      alt="Thumbnail for article: ${
+          articles[i].title
+        }"
+          />
+          <div class="post-text-container">
+            <p class="post-title">
+            ${articles[i].title.substring(0, 90)}
+            </p>
+            <p class="post-website">${articles[i].source.name}</p>
+          </div>
+        </a>`
+      );
+    }
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+getNews("everything", 8, "", "", "", "medium.com")
+  .then(() => getNews("top-headlines", 10, "us", "", "", ""))
+  .then(() => getNews("top-headlines", 10, "pl", "", "", ""));
